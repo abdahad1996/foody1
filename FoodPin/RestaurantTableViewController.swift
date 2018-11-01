@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
+class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating,UIViewControllerPreviewingDelegate{
 
     var restaurants:[RestaurantMO] = []
     
@@ -21,6 +21,15 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        if(traitCollection.forceTouchCapability == .available){
+            registerForPreviewing(with: self as UIViewControllerPreviewingDelegate,
+                                  sourceView: view)
+        }
+        
+        
+        
+        
         // Remove the title of the back button
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
@@ -242,5 +251,33 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
             tableView.reloadData()
         }
     }
+    
+    // MARK: - PEAK AND POP DELEGATE FUNCTIONS
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing,
+                           viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard let indexPath = tableView.indexPathForRow(at: location) else {
+            return nil
+        }
+        guard let cell = tableView.cellForRow(at: indexPath) else {
+            return nil
+        }
+        guard let restaurantDetailViewController =
+            storyboard?.instantiateViewController(withIdentifier:
+                "RestaurantDetailViewController") as? RestaurantDetailViewController else {
+                    return nil
+        }
+        let selectedRestaurant = restaurants[indexPath.row]
+        restaurantDetailViewController.restaurant = selectedRestaurant
+        restaurantDetailViewController.preferredContentSize = CGSize(width: 0.0,
+                                                                     height: 450.0)
+        previewingContext.sourceRect = cell.frame
+        return restaurantDetailViewController
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit
+        viewControllerToCommit: UIViewController) {
+        show(viewControllerToCommit, sender: self)
+    }    
     
 }

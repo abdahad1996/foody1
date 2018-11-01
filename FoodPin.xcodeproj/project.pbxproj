@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DAC95378218B831B00E54C64 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAC9537A218B831B00E54C64 /* Localizable.strings */; };
+		DAC9537E218B831C00E54C64 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAC95380218B831C00E54C64 /* InfoPlist.strings */; };
+		DAC9538D218B84D200E54C64 /* aboutfoodpin.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC9538F218B84D200E54C64 /* aboutfoodpin.png */; };
 		F405E4C81D5C09500042A934 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F405E4C71D5C09500042A934 /* MapKit.framework */; };
 		F405E4CA1D5C6EB20042A934 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405E4C91D5C6EB20042A934 /* MapViewController.swift */; };
 		F4177B581D586F3700822293 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4177B571D586F3700822293 /* ReviewViewController.swift */; };
@@ -30,6 +33,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DAC95375218B831B00E54C64 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		DAC95379218B831B00E54C64 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		DAC9537B218B831B00E54C64 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		DAC9537F218B831C00E54C64 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		DAC95381218B831C00E54C64 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/about.strings"; sourceTree = "<group>"; };
+		DAC9538E218B84D200E54C64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/aboutfoodpin.png; sourceTree = "<group>"; };
+		DAC95390218B84EB00E54C64 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/aboutfoodpin.png; sourceTree = "<group>"; };
+		DAC95391218B84F400E54C64 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hant"; path = "zh-Hant.lproj/aboutfoodpin.png"; sourceTree = "<group>"; };
 		F405E4C71D5C09500042A934 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F405E4C91D5C6EB20042A934 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F4177B571D586F3700822293 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DAC95382218B842F00E54C64 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DAC9538F218B84D200E54C64 /* aboutfoodpin.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		F405E4C61D5C09500042A934 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +113,9 @@
 		F4D336C01D2E4309003010DD /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				DAC95382218B842F00E54C64 /* Images */,
+				DAC95380218B831C00E54C64 /* InfoPlist.strings */,
+				DAC9537A218B831B00E54C64 /* Localizable.strings */,
 				F4D336C11D2E4309003010DD /* AppDelegate.swift */,
 				F4D336C51D2E4309003010DD /* Main.storyboard */,
 				F468FE9E1D66DAEA00263083 /* discover.storyboard */,
@@ -150,6 +172,7 @@
 				TargetAttributes = {
 					F4D336BD1D2E4309003010DD = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = ADTR2923N7;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -166,6 +189,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = F4D336B51D2E4309003010DD;
 			productRefGroup = F4D336BF1D2E4309003010DD /* Products */;
@@ -183,8 +207,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D336CC1D2E4309003010DD /* LaunchScreen.storyboard in Resources */,
+				DAC9537E218B831C00E54C64 /* InfoPlist.strings in Resources */,
+				DAC95378218B831B00E54C64 /* Localizable.strings in Resources */,
 				F4D336C91D2E4309003010DD /* Assets.xcassets in Resources */,
 				F468FE9F1D66DAEA00263083 /* discover.storyboard in Resources */,
+				DAC9538D218B84D200E54C64 /* aboutfoodpin.png in Resources */,
 				F468FE9D1D66D8E800263083 /* about.storyboard in Resources */,
 				F4D336C71D2E4309003010DD /* Main.storyboard in Resources */,
 			);
@@ -217,10 +244,38 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		DAC9537A218B831B00E54C64 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAC95379218B831B00E54C64 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		DAC95380218B831C00E54C64 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAC9537F218B831C00E54C64 /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DAC9538F218B84D200E54C64 /* aboutfoodpin.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAC9538E218B84D200E54C64 /* Base */,
+				DAC95390218B84EB00E54C64 /* en */,
+				DAC95391218B84F400E54C64 /* zh-Hant */,
+			);
+			name = aboutfoodpin.png;
+			path = aboutfoodpin/base;
+			sourceTree = "<group>";
+		};
 		F468FE9B1D66D8E800263083 /* about.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F468FE9C1D66D8E800263083 /* Base */,
+				DAC95381218B831C00E54C64 /* zh-Hant */,
 			);
 			name = about.storyboard;
 			sourceTree = "<group>";
@@ -229,6 +284,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F4D336C61D2E4309003010DD /* Base */,
+				DAC9537B218B831B00E54C64 /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -237,6 +293,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F4D336CB1D2E4309003010DD /* Base */,
+				DAC95375218B831B00E54C64 /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -339,11 +396,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ADTR2923N7;
 				INFOPLIST_FILE = FoodPin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.FoodPin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abdul.FoodPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -353,11 +410,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ADTR2923N7;
 				INFOPLIST_FILE = FoodPin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.FoodPin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abdul.FoodPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

@@ -54,6 +54,20 @@ class WalkthroughContentViewController: UIViewController {
             
         case 2: // Done Button
             UserDefaults.standard.set(true, forKey: "hasViewedWalkthrough")
+            if traitCollection.forceTouchCapability == UIForceTouchCapability.available {
+                let bundleIdentifier = Bundle.main.bundleIdentifier
+                let shortcutItem1 = UIApplicationShortcutItem(type: "\(bundleIdentifier).OpenFavorites", localizedTitle: "Show Favorites",
+                    localizedSubtitle: nil, icon: UIApplicationShortcutIcon(templateImageName:
+                        "favorite-shortcut"), userInfo: nil)
+                let shortcutItem2 = UIApplicationShortcutItem(type: "\(bundleIdentifier).OpenDiscover", localizedTitle: "Discover restaurants",
+                    localizedSubtitle: nil, icon: UIApplicationShortcutIcon(templateImageName:
+                        "discover-shortcut"), userInfo: nil)
+                let shortcutItem3 = UIApplicationShortcutItem(type: "\(bundleIdentifier).NewRestaurant", localizedTitle: "New Restaurant",
+                    localizedSubtitle: nil, icon: UIApplicationShortcutIcon(type: .add), userInfo:
+                    nil)
+                UIApplication.shared.shortcutItems = [shortcutItem1, shortcutItem2,
+                                                      shortcutItem3]
+            }
             dismiss(animated: true, completion: nil)
             
         default: break
